@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/EduNomad/static/css/main.227ee759.css",
-    "main.js": "/EduNomad/static/js/main.fc1a085b.js",
+    "main.js": "/EduNomad/static/js/main.c558ed53.js",
     "static/css/398.9b763b88.chunk.css": "/EduNomad/static/css/398.9b763b88.chunk.css",
     "static/js/398.48fa3c07.chunk.js": "/EduNomad/static/js/398.48fa3c07.chunk.js",
     "static/js/453.23d4aadd.chunk.js": "/EduNomad/static/js/453.23d4aadd.chunk.js",
@@ -12,7 +12,7 @@
     "static/media/revicons.woff": "/EduNomad/static/media/revicons.e8746a624ed098489406.woff",
     "index.html": "/EduNomad/index.html",
     "main.227ee759.css.map": "/EduNomad/static/css/main.227ee759.css.map",
-    "main.fc1a085b.js.map": "/EduNomad/static/js/main.fc1a085b.js.map",
+    "main.c558ed53.js.map": "/EduNomad/static/js/main.c558ed53.js.map",
     "398.9b763b88.chunk.css.map": "/EduNomad/static/css/398.9b763b88.chunk.css.map",
     "398.48fa3c07.chunk.js.map": "/EduNomad/static/js/398.48fa3c07.chunk.js.map",
     "453.23d4aadd.chunk.js.map": "/EduNomad/static/js/453.23d4aadd.chunk.js.map",
@@ -20,6 +20,6 @@
   },
   "entrypoints": [
     "static/css/main.227ee759.css",
-    "static/js/main.fc1a085b.js"
+    "static/js/main.c558ed53.js"
   ]
 }
