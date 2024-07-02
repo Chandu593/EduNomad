@@ -1,9 +1,9 @@
 {
   "files": {
-    "main.css": "/EduNomad/static/css/main.227ee759.css",
-    "main.js": "/EduNomad/static/js/main.c558ed53.js",
+    "main.css": "/EduNomad/static/css/main.cef5c824.css",
+    "main.js": "/EduNomad/static/js/main.b2d78a80.js",
     "static/css/398.9b763b88.chunk.css": "/EduNomad/static/css/398.9b763b88.chunk.css",
-    "static/js/398.48fa3c07.chunk.js": "/EduNomad/static/js/398.48fa3c07.chunk.js",
+    "static/js/398.da933c93.chunk.js": "/EduNomad/static/js/398.da933c93.chunk.js",
     "static/js/453.23d4aadd.chunk.js": "/EduNomad/static/js/453.23d4aadd.chunk.js",
     "static/js/789.4a1ef6d0.chunk.js": "/EduNomad/static/js/789.4a1ef6d0.chunk.js",
     "static/media/Loader.gif": "/EduNomad/static/media/Loader.d3fbaf2b81fd92c49692.gif",
@@ -11,15 +11,15 @@
     "static/media/revicons.ttf": "/EduNomad/static/media/revicons.57fd05d4ae650374c8de.ttf",
     "static/media/revicons.woff": "/EduNomad/static/media/revicons.e8746a624ed098489406.woff",
     "index.html": "/EduNomad/index.html",
-    "main.227ee759.css.map": "/EduNomad/static/css/main.227ee759.css.map",
-    "main.c558ed53.js.map": "/EduNomad/static/js/main.c558ed53.js.map",
+    "main.cef5c824.css.map": "/EduNomad/static/css/main.cef5c824.css.map",
+    "main.b2d78a80.js.map": "/EduNomad/static/js/main.b2d78a80.js.map",
     "398.9b763b88.chunk.css.map": "/EduNomad/static/css/398.9b763b88.chunk.css.map",
-    "398.48fa3c07.chunk.js.map": "/EduNomad/static/js/398.48fa3c07.chunk.js.map",
+    "398.da933c93.chunk.js.map": "/EduNomad/static/js/398.da933c93.chunk.js.map",
     "453.23d4aadd.chunk.js.map": "/EduNomad/static/js/453.23d4aadd.chunk.js.map",
     "789.4a1ef6d0.chunk.js.map": "/EduNomad/static/js/789.4a1ef6d0.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.227ee759.css",
-    "static/js/main.c558ed53.js"
+    "static/css/main.cef5c824.css",
+    "static/js/main.b2d78a80.js"
   ]
 }
