@@ -61,15 +61,15 @@ function Landingpage() {
         </Box>
         <Box sx={{ display: { xs: 'flex', md: 'none' }, flexWrap: 'wrap', justifyContent: 'space-evenly', gap: 3, padding: 3 }}>
           <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', border: '1px solid lavender', width: { xs: '500px', sm: '500px', md: '350px' }, backgroundColor: 'orange', color: 'white', height: 130, borderRadius: 4 }}>
-            <Typography variant='h4' sx={{ fontWeight: 'bold', fontSize: { xs: 30, sm: 40, md: 50 } }}>1000k+</Typography>
+            <Typography variant='h4' sx={{ fontWeight: 'bold', fontSize:26 }}>1000k+</Typography>
             <Typography variant='h5'>students</Typography>
           </Box>
           <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', border: '1px solid lavender', width: { xs: '500px', sm: '500px', md: '350px' }, backgroundColor: 'orange', color: 'white', height: 130, borderRadius: 4 }}>
-            <Typography variant='h4' sx={{ fontWeight: 'bold', fontSize: { xs: 30, sm: 40, md: 50 } }}>700+</Typography>
+            <Typography variant='h4' sx={{ fontWeight: 'bold', fontSize:26 }}>700+</Typography>
             <Typography variant='h5'>courses</Typography>
           </Box>
           <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', border: '1px solid lavender', width: { xs: '500px', sm: '500px', md: '350px' }, backgroundColor: 'orange', color: 'white', height: 130, borderRadius: 4 }}>
-            <Typography variant='h4' sx={{ fontWeight: 'bold', fontSize: { xs: 30, sm: 40, md: 50 } }}>400+</Typography>
+            <Typography variant='h4' sx={{ fontWeight: 'bold', fontSize:26 }}>400+</Typography>
             <Typography variant='h5'>mentors</Typography>
           </Box>
         </Box>
@@ -78,22 +78,22 @@ function Landingpage() {
           <Box className='hm1'>
             <div className='hm1item'id='downloads'>
               <DownloadIcon sx={{fontSize:45,color:'#d500f9'}}/>
-              <Typography variant='h4'sx={{color:'#6a1b9a',fontWeight:'bold',fontSize: { xs: 30, sm: 35 }}}>150+ Million</Typography>
+              <Typography variant='h4'sx={{color:'#6a1b9a',fontWeight:'bold',fontSize: { xs: 26, sm: 35 }}}>150+ Million</Typography>
               <Typography variant='h6'sx={{marginTop:-1}}>downloads</Typography>
             </div>
             <div className='hm1item'id='rating'>
               <StarIcon sx={{fontSize:45,color:'#d500f9'}}/>
-              <Typography variant='h4'sx={{color:'#6a1b9a',fontWeight:'bold',fontSize: { xs: 30, sm: 35 }}}>4.7+ Star</Typography>
+              <Typography variant='h4'sx={{color:'#6a1b9a',fontWeight:'bold',fontSize: { xs: 26, sm: 35 }}}>4.7+ Star</Typography>
               <Typography variant='h6'sx={{marginTop:-1}}>app rating</Typography>
             </div>
             <div className='hm1item'id='locations'>
               <PinDropIcon sx={{fontSize:45,color:'#d500f9'}}/>
-              <Typography variant='h4'sx={{color:'#6a1b9a',fontWeight:'bold',fontSize: { xs: 30, sm: 35 }}}>1100+ Cities</Typography>
+              <Typography variant='h4'sx={{color:'#6a1b9a',fontWeight:'bold',fontSize: { xs: 26, sm: 35 }}}>1100+ Cities</Typography>
               <Typography variant='h6'sx={{marginTop:-1}}>worldwide</Typography>
             </div>
             <div className='hm1item'id='time'>
               <TimerIcon sx={{fontSize:45,color:'#d500f9'}}/>
-              <Typography variant='h4'sx={{color:'#6a1b9a',fontWeight:'bold',fontSize: { xs: 30, sm: 35 }}}>71 mins avg.</Typography>
+              <Typography variant='h4'sx={{color:'#6a1b9a',fontWeight:'bold',fontSize: { xs: 26, sm: 35 }}}>71 mins avg.</Typography>
               <Typography variant='h6'sx={{marginTop:-1}}>time spent daily</Typography>
             </div>
           </Box>

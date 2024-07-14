@@ -8,26 +8,27 @@ import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { NavLink, useNavigate } from 'react-router-dom';
-import { FormControl, IconButton, InputAdornment, InputLabel, OutlinedInput } from '@mui/material';
+import { IconButton, InputAdornment } from '@mui/material';
 import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
-import {useForm} from 'react-hook-form'
-import {DevTool} from '@hookform/devtools'
+import { useForm } from 'react-hook-form'
+import { DevTool } from '@hookform/devtools'
 import './Global.css'
 export default function Register() {
-    const form=useForm()
-    const {register,control,handleSubmit,formState}=form
-    const {errors}=formState
-    const navigate=useNavigate()
+    const form = useForm()
+    const { register, control, handleSubmit, formState ,watch} = form
+    const password=watch('password')
+    const { errors } = formState
+    const navigate = useNavigate()
     const handlSubmit = (data) => {
-        // event.preventDefault();
         console.log(data)
         navigate('/login')
     }
+    const passwordMatch=(value)=>value === password ? undefined : 'Passwords do not match'
     const [showPassword, setShowPassword] = React.useState(false)
-  const handleClickShowPassword = () => setShowPassword(show => !show)
+    const handleClickShowPassword = () => setShowPassword(show => !show)
     return (
-        <Container component="main" maxWidth="xs"sx={{height:{xs:'79.7vh',sm:'78.63vh',md:'78.7vh'}}}>
+        <Container component="main" maxWidth="xs" sx={{ height: '100vh' }}>
             <Box
                 sx={{
                     marginTop: 8,
@@ -53,9 +54,15 @@ export default function Register() {
                                 id="firstName"
                                 label="First Name"
                                 autoFocus
-                                {...register('firstName',{required:{value:true,message:'First name required'}})}
+                                {...register('firstName', {
+                                    required: { value: true, message: 'First name is required' }, pattern: {
+                                        value
+                                            : /^([A-Za-z]+(?: [A-Za-z]+)*)$/, message: 'Only letters are allowed'
+                                    }
+                                })}
+                                error={!!errors.firstName}
+                                helperText={errors.firstName?.message}
                             />
-                            <p className='error'>{errors.firstName?.message}</p>
                         </Grid>
                         <Grid item xs={12} sm={6}>
                             <TextField
@@ -64,10 +71,11 @@ export default function Register() {
                                 id="lastName"
                                 label="Last Name"
                                 name="lastName"
+                                {...register('lastName', { required: { value: true, message: 'Last name is required' }, pattern: { value: /^(?:[A-Z]+|[a-z]+)$/, message: 'Only letters are allowed' } })}
                                 autoComplete="last-name"
-                                {...register('lastName')}
+                                error={!!errors.lastName}
+                                helperText={errors.lastName?.message}
                             />
-                            <p className='error'>{errors.lastName?.message}</p>
                         </Grid>
                         <Grid item xs={12}>
                             <TextField
@@ -78,17 +86,15 @@ export default function Register() {
                                 name="email"
                                 autoComplete="email"
                                 type='email'
-                                {...register('email')}
+                                {...register('email', { required: { value: true, message: 'Email is required' }, pattern: { value: /^[a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+(?:\.[a-zA-Z]{2,})$/, message: 'Invalid email format' } })}
+                                error={!!errors.email}
+                                helperText={errors.email?.message}
                             />
-                            <p className='error'>{errors.email?.message}</p>
                         </Grid>
                         <Grid item xs={12}>
-                            <FormControl variant="outlined" fullWidth required sx={{mb:2}}>
-                                <InputLabel htmlFor="outlined-adornment-password">Password</InputLabel>
-                                <OutlinedInput
-                                    id="outlined-adornment-password"
-                                    type={showPassword ? 'text' : 'password'}
-                                    endAdornment={
+                            <TextField fullWidth required id='password' type={showPassword ? 'text' : 'password'} sx={{ mb: 2 }}
+                                InputProps={{
+                                    endAdornment:
                                         <InputAdornment position="end">
                                             <IconButton
                                                 aria-label="toggle password visibility"
@@ -98,19 +104,17 @@ export default function Register() {
                                                 {showPassword ? <Visibility /> : <VisibilityOff />}
                                             </IconButton>
                                         </InputAdornment>
-                                    }
-                                    label="Password"
-                                    autoComplete='password'
-                                    {...register('password')}
-                                />
-                                <p className='error'>{errors.password?.message}</p>
-                            </FormControl>
-                            <FormControl variant="outlined" fullWidth required>
-                                <InputLabel htmlFor="outlined-adornment-confirmpassword">Confirm Password</InputLabel>
-                                <OutlinedInput
-                                    id="outlined-adornment-confirmpassword"
-                                    type={showPassword ? 'text' : 'password'}
-                                    endAdornment={
+                                }}
+                                label="Password"
+                                name='password'
+                                {...register('password', { required: { value: true, message: 'Password is required' }, pattern: { value: /^(?=.*[0-9])(?=.*[!@#$%^&*])[^\s]{8,}$/, message: 'Password must be of min length 8 with atleast one number and a special character' } })}
+                                autoComplete='password'
+                                error={!!errors.password}
+                                helperText={errors.password?.message} />
+
+                            <TextField fullWidth required id='confirmpassword' type={showPassword ? 'text' : 'password'} sx={{ mb: 2 }}
+                                InputProps={{
+                                    endAdornment:
                                         <InputAdornment position="end">
                                             <IconButton
                                                 aria-label="toggle password visibility"
@@ -120,25 +124,23 @@ export default function Register() {
                                                 {showPassword ? <Visibility /> : <VisibilityOff />}
                                             </IconButton>
                                         </InputAdornment>
-                                    }
-                                    label="Confirm Password"
-                                    autoComplete='confirmpassword'
-                                    {...register('confirmpassword')}
-                                />
-                                <p className='error'>{errors.confirmpassword?.message}</p>
-                            </FormControl>
+                                }}
+                                label="Confirm Password"
+                                name='confirmpassword'
+                                {...register('confirmpassword', { required: { value: true, message: 'Confirm your password' },validate:passwordMatch })}
+                                autoComplete='confirmpassword'
+                                error={!!errors.confirmpassword}
+                                helperText={errors.confirmpassword?.message} />
                         </Grid>
                     </Grid>
-                    {/* <NavLink to='/login' style={{textDecoration:'none'}}> */}
                     <Button
                         type="submit"
                         fullWidth
                         variant="contained"
-                        sx={{ mt: 3, mb: 2, textTransform: 'none', fontSize: 20 }}
+                        sx={{ mb: 2, textTransform: 'none', fontSize: 20 }}
                     >
                         Register
                     </Button>
-                    {/* </NavLink> */}
                     <Grid container justifyContent="flex-end">
                         <Grid item>
                             <NavLink to='/login' style={{ textDecoration: 'underline', fontSize: 14 }}>
@@ -147,7 +149,7 @@ export default function Register() {
                         </Grid>
                     </Grid>
                 </Box>
-                <DevTool control={control}/>
+                <DevTool control={control} />
             </Box>
         </Container>
     );

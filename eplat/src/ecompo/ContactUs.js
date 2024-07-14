@@ -31,7 +31,7 @@ export default function contactus() {
                                 required
                                 fullWidth
                                 id="name"
-                                label="name"
+                                label="Name"
                                 name="name"
                                 autoComplete="name"
                                 autoFocus
@@ -52,27 +52,28 @@ export default function contactus() {
                                 margin="normal"
                                 required
                                 fullWidth
-                                name="Mobile number"
-                                label="Mobile number"
-                                type="Mobile number"
-                                id="Mobile number"
-                                autoComplete="Mobile number"
+                                name="mobilenumber"
+                                label="Mobile Number"
+                                type="text"
+                                id="mobilenumber"
+                                autoComplete="mobilenumber"
                                 sx={{ backgroundColor: '#f7f9fa' }}
                             />
                             <TextField
                                 margin="normal"
+                                required
                                 multiline
                                 rows={4}
                                 fullWidth
-                                name="Write to us"
+                                name="writetous"
                                 label="Write to us"
-                                type="Write to us"
-                                id="Write to us"
-                                autoComplete="Write to us"
+                                type="writetous"
+                                id="writetous"
+                                autoComplete="writetous"
                                 sx={{ backgroundColor: '#f7f9fa' }}
                             />
                             <Box sx={{ display: 'grid', placeItems: 'center', width: 'inherit' }}>
-                                <Button variant='contained' sx={{ margin:2,padding:1,width:200, backgroundColor: '#813588', color: 'white',"&:hover": { backgroundColor: "#813588" } }}>Submit</Button>
+                                <Button type='submit'variant='contained' sx={{ margin:2,padding:1,width:200, backgroundColor: '#813588', color: 'white',"&:hover": { backgroundColor: "#813588" } }}>Submit</Button>
                             </Box>
                         </Box>
                     </Box>

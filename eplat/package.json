@@ -1,4 +1,5 @@
 {
+  "homepage": "https://Chandu593.github.io/EduNomad",
   "name": "eplat",
   "version": "0.1.0",
   "private": true,
@@ -20,7 +21,6 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "homepage":"https://Chandu593.github.io/EduNomad",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",

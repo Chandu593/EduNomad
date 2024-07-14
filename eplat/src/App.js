@@ -1,7 +1,6 @@
 import React from 'react'
-// import Landingpage from './ecompo/Landingpage'
 import Courses from './ecompo/Courses'
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter , Routes, Route } from 'react-router-dom';
 import Ehome from './ecompo/Ehome'
 import './ecompo/Global.css'
 import Lectures from './ecompo/Lectures';
@@ -28,7 +27,7 @@ function App() {
   const teluguvideos= ['https://media.istockphoto.com/id/1177255543/video/colors-in-motion.mp4?s=mp4-640x640-is&k=20&c=Ph50w6t3yui3f61WQ6sCFUsK3mgqxo3EuILCETTULDY=', 'https://media.istockphoto.com/id/840778180/video/female-videographer-edits-and-cuts-footage-and-sound-on-her-personal-computer-her-office-is.mp4?s=mp4-640x640-is&k=20&c=48Gkd9bPRGJMDwkoM7e1tWOg1wo-kYX37J0wsYV2saU=', 'https://media.istockphoto.com/id/1278764387/video/internet-interface-concept-person-sitting-on-couch-puts-on-virtual-reality-headset-and-enters.mp4?s=mp4-640x640-is&k=20&c=jFhiAR7NRfL993qOFRSRbMkGZmwwEunq4VMOS8nePwc=', 'https://media.istockphoto.com/id/1310625574/video/girl-watches-humpback-whale-flying-above-the-sea-mystical-fantasy-dream-scene-a-spirit-animal.mp4?s=mp4-640x640-is&k=20&c=W6Ns3JrrmfRjcYW3sd4oyWzX979551Pky-n76c_3wuY=', 'https://media.istockphoto.com/id/839995972/video/front-view-of-an-old-fashioned-antique-super-8mm-film-projector-projecting-a-beam-of-light-in.mp4?s=mp4-640x640-is&k=20&c=5RS_w85HqPMEDCVTSBXBl201dtVTo-dSRDMZh592l5Y=', 'https://media.istockphoto.com/id/900714718/video/funny-cat-plays-a-keyboard-organ-or-piano.mp4?s=mp4-640x640-is&k=20&c=QdYSCiLvVadUzFEhTyvDDVC5HyyT4hrICGxnSnqwqGw=', 'https://media.istockphoto.com/id/1411416036/video/person-using-social-media-app-on-smartphone-looking-at-live-stream-videos-realistic-feed.mp4?s=mp4-640x640-is&k=20&c=uIUPuW_4AUc-dgUpzmIFKQIWI__M7veJx9gdT3VuAak=', 'https://media.istockphoto.com/id/1045560244/video/streaming-media-technology-and-multimedia-concept.mp4?s=mp4-640x640-is&k=20&c=yMQjXipYVMUu8C25bhPRZQYV9hXh-_hbE3QLSBaAt-s=', 'https://media.istockphoto.com/id/1317625168/video/4k-video-footage-of-beautiful-lush-green-mountains.mp4?s=mp4-640x640-is&k=20&c=TYfRL-m2MY6PJN8R6H_pbsB0hgJGbwOf8nzSFSnIbtU=', 'https://media.istockphoto.com/id/1405502365/video/highlighted-united-states-map-zooming-in-from-the-space-through-a-4k-photo-real-animated.mp4?s=mp4-640x640-is&k=20&c=ZKr7bXf4iVj31dsyfhDdY9qw1gbvWXXSjlVaRB-q0yM=']
   return (
     <context.Provider value={{isLoggedIn,update}}>
-    <BrowserRouter>
+    <HashRouter>
       <Ehome />
       <Routes>
         <Route exact path='/' element={<React.Suspense fallback={<Spinner/>}><Lazy key='1'/></React.Suspense>}></Route>
@@ -51,7 +50,7 @@ function App() {
         <Route exact path='/register' element={<Register key='18' />}></Route>
       </Routes>
         <Typography variant='h6' className='text-center' sx={{height: '70px', background: '#813588',color:'white', display: 'grid',placeItems:'center',fontSize:{xs:15,sm:20}}}><b>All rights reserved|Copyright&copy;2024,INC</b></Typography>
-    </BrowserRouter>
+    </HashRouter>
     </context.Provider>
   )
 }

@@ -20,17 +20,14 @@ import InfoIcon from '@mui/icons-material/Info';
 import PermContactCalendarIcon from '@mui/icons-material/PermContactCalendar';
 import SchoolIcon from '@mui/icons-material/School';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
-import DarkModeIcon from '@mui/icons-material/DarkMode';
+// import DarkModeIcon from '@mui/icons-material/DarkMode';
+import LightModeIcon from '@mui/icons-material/LightMode';
 import BookmarksIcon from '@mui/icons-material/Bookmarks';
 import { Tooltip } from '@mui/material';
 import '../ecompo/Global.css'
-// import Dialoge from './Dialoge';
-// import { context } from './Login';
 import { NavLink } from 'react-router-dom';
 import { Button } from '@mui/material';
 import { context } from '../App';
-// import { context } from './Contexts/ContextWrapper';
-
 const drawerWidth = 250;
 
 const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' })(
@@ -117,19 +114,19 @@ export default function Ehome() {
                     },
                   ],
                 },
-              }}><AccountCircleIcon sx={{ fontSize: 40, '&:hover': { cursor: 'pointer' } }} /></Tooltip>
-              <Tooltip title='Dark Mode' placement="bottom" arrow slotProps={{
+              }}><AccountCircleIcon sx={{ fontSize:{xs:35,md:40}, '&:hover': { cursor: 'pointer' } }} /></Tooltip>
+              <Tooltip title='Light Mode' placement="bottom" arrow slotProps={{
                 popper: {
                   modifiers: [
                     {
                       name: 'offset',
                       options: {
-                        offset: [0, 3],
+                        offset: [0, 5],
                       },
                     },
                   ],
                 },
-              }}><DarkModeIcon sx={{ fontSize: 41, '&:hover': { cursor: 'pointer' } }} /></Tooltip>
+              }}><LightModeIcon sx={{ fontSize:{xs:33,md:36},mt:0.2, '&:hover': { cursor: 'pointer' } }} /></Tooltip>
             </Box>}
             {!isLoggedIn&&<Box sx={{ display: { xs: 'none', sm: 'flex' },gap:1 }}>
               <NavLink to='/login' style={{ textDecoration: 'none' }}><Button
