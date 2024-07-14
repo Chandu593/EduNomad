@@ -101,7 +101,7 @@ export default function Register() {
                                                 onClick={handleClickShowPassword}
                                                 edge="end"
                                             >
-                                                {showPassword ? <Visibility /> : <VisibilityOff />}
+                                                {showPassword ? <VisibilityOff /> : <Visibility />}
                                             </IconButton>
                                         </InputAdornment>
                                 }}
@@ -121,7 +121,7 @@ export default function Register() {
                                                 onClick={handleClickShowPassword}
                                                 edge="end"
                                             >
-                                                {showPassword ? <Visibility /> : <VisibilityOff />}
+                                                {showPassword ? <VisibilityOff /> : <Visibility />}
                                             </IconButton>
                                         </InputAdornment>
                                 }}
