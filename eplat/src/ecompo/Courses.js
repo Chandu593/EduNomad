@@ -1,9 +1,10 @@
 import React from 'react'
 import '../ecompo/Global.css';
 import Cards from './Cards';
-import { Divider, IconButton, Typography } from '@mui/material'
+import { Alert, Divider, IconButton, Typography } from '@mui/material'
 import { NavLink} from 'react-router-dom';
 import WestIcon from '@mui/icons-material/West';
+import { context } from '../App';
 
 function Courses() {
   let subjects = [{ subname: 'Telugu', imgurl: 'https://tse4.mm.bing.net/th?id=OIP.ynfz9J5eF-7meBzw5YpyrAHaFc&pid=Api&P=0&h=180', link: '/telugu' },
@@ -16,6 +17,7 @@ function Courses() {
   { subname: 'Chemistry', imgurl: 'https://tse4.mm.bing.net/th?id=OIP.7dJN0KRfgBx2idiK11yO8AHaE8&pid=Api&P=0&h=180', link: '/chemistry' },
   { subname: 'GK', imgurl: 'https://tse4.mm.bing.net/th?id=OIP.Mi7PCTB1kYgQ0ceZdjvYpQHaE8&pid=Api&P=0&h=180', link: '/gk' },
   { subname: 'Economics', imgurl: 'https://tse4.mm.bing.net/th?id=OIP._kkXVDPZNPa56aXkxiayEQHaFL&pid=Api&P=0&h=180', link: '/economics' }]
+  const {isLoggedIn}=React.useContext(context)
   return (
     <>
       <div className='quick1'>
@@ -25,9 +27,11 @@ function Courses() {
         <Typography variant='h5' sx={{ marginX: 2, fontWeight: 'bold' }}><div className='global'>Our Courses</div></Typography>
       </div>
       <Divider variant='middle' sx={{ background: 'black', boxShadow: '1px 1px 1px black' }} />
+      {!isLoggedIn&&<Alert severity='warning'variant='filled'sx={{color:'black',borderRadius:'0',display:'flex',justifyContent:'center',alignItems:'center',fontSize:{xs:15,sm:20}}}>Please login to view the playlist for free.</Alert>}
       <div className='quick4'>
         {
-          subjects.map((element) => { return <NavLink to={element.link} style={{ textDecoration: 'none' }} key={element.imgurl} ><Cards key={element.imgurl} subjectname={element.subname} imgurl={element.imgurl} /></NavLink> })
+          subjects.map((element) => {
+            return <Cards key={element.imgurl} subjectname={element.subname} imgurl={element.imgurl} link={element.link} /> })
         }
       </div>
     </>

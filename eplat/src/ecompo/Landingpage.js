@@ -112,9 +112,7 @@ function Landingpage() {
           <Box sx={{ display: { xs: 'flex', sm: 'none' }, justifyContent: 'start', width: '90vw', overflowX: 'auto', gap: 3 }}>
             {
               subjects.map((element) => (
-                <NavLink to={element.link} style={{ textDecoration: 'none' }} key={element.subname}>
-                  <CarouselCardMini key={element.subname} subjectname={element.subname} imgurl={element.imgurl} />
-                </NavLink>
+                  <CarouselCardMini key={element.subname} subjectname={element.subname} imgurl={element.imgurl} link={element.link}/>
               ))
             }
           </Box>

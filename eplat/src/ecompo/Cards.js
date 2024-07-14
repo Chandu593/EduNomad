@@ -1,18 +1,25 @@
 import React from 'react'
-import { Card, CardActionArea, CardActions, CardContent, CardMedia,Button,Typography} from '@mui/material';
+import { Card, CardActionArea, CardActions, CardContent, CardMedia, Button, Typography } from '@mui/material';
+import { context } from '../App';
+import { useNavigate } from 'react-router-dom';
 function Cards(props) {
+  const navigate = useNavigate()
+  const {isLoggedIn} = React.useContext(context)
+  const handleClick = () => {
+    if (isLoggedIn) navigate(props.link)
+  }
   return (
-    <Card sx={{width: 320,minWidth:'300px', maxHeight: 350, margin: 3, padding: 2, '&:hover': { boxShadow: '5px 5px 5px rgb(190, 176, 196)',cursor:'pointer',transition:'all 0.3s' } }}>
-          <CardActionArea>
-            <CardMedia component='img' height='140' width='200' image={`${props.imgurl}`} />
-            <CardContent>
-              <Typography variant='h6' sx={{ marginLeft: -2, fontWeight: 'bold' }}><div className='global'>{`Complete ${props.subjectname} course`}</div></Typography>
-            </CardContent>
-          </CardActionArea>
-          <CardActions>
-            <Button variant='contained' size='medium' sx={{ fontWeight: 'bold',borderRadius:1, backgroundImage:'linear-gradient(to right, #ff9234, #fc6274 100%)', color: 'white', marginLeft: -1,marginBottom:-0.3,padding:1.2,paddingInline:2  }}>View Playlist</Button>
-          </CardActions>
-        </Card>
+    <Card sx={{ width: 320, minWidth: '300px', maxHeight: 350, margin: 3, padding: 2, '&:hover': { boxShadow: '5px 5px 5px rgb(190, 176, 196)', cursor: 'pointer', transition: 'all 0.3s' } }}>
+      <CardActionArea>
+        <CardMedia component='img' height='140' width='200' image={`${props.imgurl}`} />
+        <CardContent>
+          <Typography variant='h6' sx={{ marginLeft: -2, fontWeight: 'bold' }}><div className='global'>{`Complete ${props.subjectname} course`}</div></Typography>
+        </CardContent>
+      </CardActionArea>
+      <CardActions>
+        <Button variant='contained' onClick={handleClick} disabled={!isLoggedIn}size='medium' sx={{ fontWeight: 'bold', borderRadius: 1, backgroundImage: 'linear-gradient(to right, #ff9234, #fc6274 100%)', color: 'white', marginLeft: -1, marginBottom: -0.3, padding: 1.2, paddingInline: 2 }}>View Playlist</Button>
+      </CardActions>
+    </Card>
   )
 }
 export default Cards

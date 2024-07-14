@@ -1,5 +1,6 @@
 import React from 'react'
-import { Card, CardActionArea, CardActions, CardContent, CardMedia,Button,Typography} from '@mui/material';
+import { Card, CardActionArea, CardActions, CardContent, CardMedia,Typography} from '@mui/material';
+import Alertt from './Alertt';
 function CarouselCardMini(props) {
   return (
     <>
@@ -11,7 +12,7 @@ function CarouselCardMini(props) {
             </CardContent>
           </CardActionArea>
           <CardActions>
-            <Button variant='contained' size='medium' sx={{ fontWeight: 'bold',borderRadius:1, backgroundImage:'linear-gradient(to right, #ff9234, #fc6274 100%)', color: 'white', marginLeft: -1,marginBottom:-0.3,padding:1.2,paddingInline:2 }}>View Playlist</Button>
+            <Alertt link={props.link}/>
           </CardActions>
         </Card> 
     </>

@@ -1,6 +1,5 @@
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import { NavLink } from 'react-router-dom'
 import React from 'react'
 import CarouselCard from '../ecompo/CarouselCard'
 import ReviewCard from '../ecompo/ReviewCard'
@@ -52,15 +51,11 @@ function CarouseL(props) {
                 customTransition="all .5"
                 transitionDuration={300}
                 containerClass="carousel-container"
-                // removeArrowOnDeviceType={["tablet", "mobile"]}
-                // deviceType={this.props.deviceType}
                 dotListClass="custom-dot-list-style"
             >
                 {props.for === 'subject' ? (
                     subjects.map((element) => (
-                        <NavLink to={element.link} style={{ textDecoration: 'none' }} key={element.subname}>
-                            <CarouselCard key={element.subname} subjectname={element.subname} imgurl={element.imgurl} />
-                        </NavLink>
+                            <CarouselCard key={element.subname} subjectname={element.subname} imgurl={element.imgurl}link={element.link} />
                     ))
                 ) : (
                     ratingDetails.map((element) => <ReviewCard key={element.profilepic} profilepic={element.profilepic}posteddate={element.posteddate}description={element.description}name={element.name} />)

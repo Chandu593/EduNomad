@@ -20,7 +20,6 @@ import InfoIcon from '@mui/icons-material/Info';
 import PermContactCalendarIcon from '@mui/icons-material/PermContactCalendar';
 import SchoolIcon from '@mui/icons-material/School';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
-// import DarkModeIcon from '@mui/icons-material/DarkMode';
 import LightModeIcon from '@mui/icons-material/LightMode';
 import BookmarksIcon from '@mui/icons-material/Bookmarks';
 import { Tooltip } from '@mui/material';
@@ -93,7 +92,7 @@ export default function Ehome() {
                 aria-label='menu'
                 onClick={() => setIsdraweropen(true)}
               >
-                <MenuIcon sx={{ fontSize: '35px', color: 'white' }} />
+                <MenuIcon sx={{ fontSize: {xs:30,sm:'35px'}, color: 'white' }} />
               </IconButton>
               <Typography variant="h5" noWrap component="div" sx={{ paddingY: '15px' }}>
                 EduNomad<sup>TM</sup>
@@ -114,7 +113,7 @@ export default function Ehome() {
                     },
                   ],
                 },
-              }}><AccountCircleIcon sx={{ fontSize:{xs:35,md:40}, '&:hover': { cursor: 'pointer' } }} /></Tooltip>
+              }}><AccountCircleIcon sx={{ fontSize:{xs:30,md:40}, '&:hover': { cursor: 'pointer' } }} /></Tooltip>
               <Tooltip title='Light Mode' placement="bottom" arrow slotProps={{
                 popper: {
                   modifiers: [
@@ -126,7 +125,7 @@ export default function Ehome() {
                     },
                   ],
                 },
-              }}><LightModeIcon sx={{ fontSize:{xs:33,md:36},mt:0.2, '&:hover': { cursor: 'pointer' } }} /></Tooltip>
+              }}><LightModeIcon sx={{ fontSize:{xs:29,md:36},mt:0.2, '&:hover': { cursor: 'pointer' } }} /></Tooltip>
             </Box>}
             {!isLoggedIn&&<Box sx={{ display: { xs: 'none', sm: 'flex' },gap:1 }}>
               <NavLink to='/login' style={{ textDecoration: 'none' }}><Button

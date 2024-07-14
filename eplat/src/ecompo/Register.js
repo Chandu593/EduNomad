@@ -55,7 +55,7 @@ export default function Register() {
                                 label="First Name"
                                 autoFocus
                                 {...register('firstName', {
-                                    required: { value: true, message: 'First name is required' }, pattern: {
+                                    required: { value: true, message:'First name is required'}, pattern: {
                                         value
                                             : /^([A-Za-z]+(?: [A-Za-z]+)*)$/, message: 'Only letters are allowed'
                                     }

@@ -6,11 +6,9 @@ import CardActions from '@mui/material/CardActions';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import ShareIcon from '@mui/icons-material/Share';
-import { Box, Tooltip } from '@mui/material';
+import {Box, Tooltip } from '@mui/material';
 import ThumbUpOffAltIcon from '@mui/icons-material/ThumbUpOffAlt';
 import ThumbUpAltIcon from '@mui/icons-material/ThumbUpAlt';
-// import MoreVertIcon from '@mui/icons-material/MoreVert';
-// import BookmarkIcon from '@mui/icons-material/Bookmark';
 import BookmarkBorderIcon from '@mui/icons-material/BookmarkBorder';
 
 export default function Playlistcard(Props) {
@@ -25,12 +23,11 @@ export default function Playlistcard(Props) {
       setlikecount(likecount - 1)
     }
   }
-
   return (
     <>
       <Card component='div' sx={{ maxWidth: 320, margin: 3, '&:hover': { boxShadow: '5px 5px 5px rgb(190, 176, 196)', cursor: 'pointer', transition: 'all 0.3s' } }}>
         <CardMedia>
-          <video width='320px' height='180px' src='https://media.istockphoto.com/id/1177255543/video/colors-in-motion.mp4?s=mp4-640x640-is&k=20&c=Ph50w6t3yui3f61WQ6sCFUsK3mgqxo3EuILCETTULDY=' poster={Props.poster} controls />
+          <video width='320px' height='180px' src='https://media.istockphoto.com/id/1177255543/video/colors-in-motion.mp4?s=mp4-640x640-is&k=20&c=Ph50w6t3yui3f61WQ6sCFUsK3mgqxo3EuILCETTULDY='poster={Props.poster} controls />
         </CardMedia>
         <CardContent sx={{ marginY: -2.2 }}><Typography variant='body1'>Complete {Props.subname} course (part {Props.num})</Typography>
           <Typography variant="body2" color="text.secondary">
@@ -40,7 +37,7 @@ export default function Playlistcard(Props) {
         <CardActions disableSpacing sx={{ display: 'flex', justifyContent: 'space-between', marginTop: -3 }}>
           <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
             <IconButton onClick={handlelike} aria-label="add to favorites" sx={{ '&:hover': { background: 'none' } }} >
-              {like ?<ThumbUpAltIcon sx={{ fontSize: 26, color: '#813588' }} />: <Tooltip title='Like' placement="top" arrow slotProps={{
+              {like ? <ThumbUpAltIcon sx={{ fontSize: 26, color: '#813588' }} /> : <Tooltip title='Like' placement="top" arrow slotProps={{
                 popper: {
                   modifiers: [
                     {
