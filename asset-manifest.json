@@ -1,25 +1,25 @@
 {
   "files": {
     "main.css": "/EduNomad/static/css/main.cef5c824.css",
-    "main.js": "/EduNomad/static/js/main.b2d78a80.js",
-    "static/css/398.9b763b88.chunk.css": "/EduNomad/static/css/398.9b763b88.chunk.css",
-    "static/js/398.da933c93.chunk.js": "/EduNomad/static/js/398.da933c93.chunk.js",
+    "main.js": "/EduNomad/static/js/main.10f4ebaa.js",
+    "static/css/671.c459932a.chunk.css": "/EduNomad/static/css/671.c459932a.chunk.css",
+    "static/js/671.c898264a.chunk.js": "/EduNomad/static/js/671.c898264a.chunk.js",
     "static/js/453.23d4aadd.chunk.js": "/EduNomad/static/js/453.23d4aadd.chunk.js",
-    "static/js/789.4a1ef6d0.chunk.js": "/EduNomad/static/js/789.4a1ef6d0.chunk.js",
+    "static/js/797.6dc83672.chunk.js": "/EduNomad/static/js/797.6dc83672.chunk.js",
     "static/media/Loader.gif": "/EduNomad/static/media/Loader.d3fbaf2b81fd92c49692.gif",
     "static/media/revicons.eot": "/EduNomad/static/media/revicons.a77de540a38981833f9e.eot",
     "static/media/revicons.ttf": "/EduNomad/static/media/revicons.57fd05d4ae650374c8de.ttf",
     "static/media/revicons.woff": "/EduNomad/static/media/revicons.e8746a624ed098489406.woff",
     "index.html": "/EduNomad/index.html",
     "main.cef5c824.css.map": "/EduNomad/static/css/main.cef5c824.css.map",
-    "main.b2d78a80.js.map": "/EduNomad/static/js/main.b2d78a80.js.map",
-    "398.9b763b88.chunk.css.map": "/EduNomad/static/css/398.9b763b88.chunk.css.map",
-    "398.da933c93.chunk.js.map": "/EduNomad/static/js/398.da933c93.chunk.js.map",
+    "main.10f4ebaa.js.map": "/EduNomad/static/js/main.10f4ebaa.js.map",
+    "671.c459932a.chunk.css.map": "/EduNomad/static/css/671.c459932a.chunk.css.map",
+    "671.c898264a.chunk.js.map": "/EduNomad/static/js/671.c898264a.chunk.js.map",
     "453.23d4aadd.chunk.js.map": "/EduNomad/static/js/453.23d4aadd.chunk.js.map",
-    "789.4a1ef6d0.chunk.js.map": "/EduNomad/static/js/789.4a1ef6d0.chunk.js.map"
+    "797.6dc83672.chunk.js.map": "/EduNomad/static/js/797.6dc83672.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.cef5c824.css",
-    "static/js/main.b2d78a80.js"
+    "static/js/main.10f4ebaa.js"
   ]
 }
