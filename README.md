@@ -1,1 +1,1 @@
-# EduNomad
+This open-source e-learning platform, built with React and Material UI, offers free courses across diverse subjects. Designed with a user-centric approach, it provides intuitive navigation and easy access to course tutorials.Users can easily register and log in to explore a variety of course tutorials without any subscription fees.
